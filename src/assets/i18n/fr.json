@@ -1,0 +1,23 @@
+{
+  "home": {
+    "welcome": "Bienvenue sur mon portfolio",
+    "discover": "Découvrir mon parcours",
+    "intro": "Découvre mon parcours, mes projets et mes compétences à travers une aventure interactive.",
+    "journey": "🧭 Mon parcours",
+    "today": "Aujourd'hui",
+    "lookingForJob": "🚀 En recherche d’un CDI dans le développement",
+    "lookingForJob_desc": "Motivée pour rejoindre une entreprise tech en tant que développeuse full-stack, où je pourrai valoriser mes compétences en front, back et design UX.",
+    "master": "🎓 Master Développement Full-Stack – Efrei Paris (en alternance)",
+    "master_desc": "Participation à des projets avancés en front-end Angular, tutoriels interactifs, gestion d'utilisateurs et maintenance back-end Java.",
+    "licence": "🧪 Licence Pro – Conception, Développement, Test de Logiciels (en alternance)",
+    "licence_desc": "Mise en œuvre de nouvelles interfaces, amélioration UX et création de pages spécifiques pour des cas métiers réels.",
+    "dut": "💻 DUT Informatique – IUT de Montreuil (stage de 16 semaines)",
+    "dut_desc": "Formation solide en développement logiciel, bases de données et algorithmique. Le stage m’a permis d'intégrer une équipe produit et de découvrir les outils professionnels.",
+    "bac": "🎓 Baccalauréat",
+    "bac_desc": "Obtention du bac, avec l’objectif clair de poursuivre des études en informatique et développer ma passion pour la tech."
+  },
+  "language": {
+    "fr": "Français",
+    "en": "Anglais"
+  }
+}

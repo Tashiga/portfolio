@@ -8,9 +8,8 @@ describe('ParcoursComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ParcoursComponent]
-    })
-    .compileComponents();
+      imports: [ParcoursComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ParcoursComponent);
     component = fixture.componentInstance;

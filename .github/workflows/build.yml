@@ -2,7 +2,7 @@ name: 🚀 Build Angular Project
 
 on:
   push:
-    branches: [master]  # Déclenche sur chaque push dans master
+    branches: [master] # Déclenche sur chaque push dans master
 
 jobs:
   build:

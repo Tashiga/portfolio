@@ -7,8 +7,33 @@
       <li><a routerLink="/" routerLinkActive="font-bold text-blue-300">Accueil</a></li>
       <li><a routerLink="/parcours" routerLinkActive="font-bold text-blue-300">Parcours</a></li>
       <li><a routerLink="/projets" routerLinkActive="font-bold text-blue-300">Projets</a></li>
-      <li><a routerLink="/competences" routerLinkActive="font-bold text-blue-300">Compétences</a></li>
+      <li>
+        <a routerLink="/competences" routerLinkActive="font-bold text-blue-300">Compétences</a>
+      </li>
       <li><a routerLink="/contact" routerLinkActive="font-bold text-blue-300">Contact</a></li>
     </ul>
+
+    <div class="flex gap-2 items-center">
+      <div *ngFor="let lang of languages" tabindex="0" class="relative group">
+        <img
+          [src]="'assets/flags/' + lang + '.svg'"
+          [alt]="lang"
+          tabindex="0"
+          class="w-6 h-6 cursor-pointer transition duration-200"
+          [ngClass]="{
+            'opacity-100 ring-2 ring-blue-400': currentLang === lang,
+            'opacity-50 grayscale': currentLang !== lang,
+          }"
+          (click)="setLanguage(lang)"
+          (keydown.enter)="setLanguage(lang)"
+        />
+
+        <span
+          class="absolute top-full left-1/2 translate-x-[-50%] mt-2 px-2 py-1 text-sm text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10"
+        >
+          {{ 'language.' + lang | translate }}
+        </span>
+      </div>
+    </div>
   </div>
 </nav>

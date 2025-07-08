@@ -1,27 +1,22 @@
 [
   {
     "annee": "Aujourd’hui",
-    "titre": "🚀 En recherche d’un CDI dans le développement",
-    "description": "Motivée pour rejoindre une entreprise tech en tant que développeuse full-stack, où je pourrai valoriser mes compétences en front, back et design UX."
+    "titre": "lookingForJob"
   },
   {
     "annee": "2023 – 2025",
-    "titre": "🎓 Master Développement Full-Stack – Efrei Paris (en alternance)",
-    "description": "Participation à des projets avancés en front-end Angular, tutoriels interactifs, gestion d'utilisateurs et maintenance back-end Java."
+    "titre": "master"
   },
   {
     "annee": "2022 – 2023",
-    "titre": "🧪 Licence Pro – Conception, Développement, Test de Logiciels (en alternance)",
-    "description": "Mise en œuvre de nouvelles interfaces, amélioration UX et création de pages spécifiques pour des cas métiers réels."
+    "titre": "licence"
   },
   {
     "annee": "2020 – 2022",
-    "titre": "💻 DUT Informatique – IUT de Montreuil (stage de 16 semaines)",
-    "description": "Formation solide en développement logiciel, bases de données et algorithmique. Le stage m’a permis d'intégrer une équipe produit et de découvrir les outils professionnels."
+    "titre": "dut"
   },
   {
     "annee": "2020",
-    "titre": "🎓 Baccalauréat",
-    "description": "Obtention du bac, avec l’objectif clair de poursuivre des études en informatique et développer ma passion pour la tech."
+    "titre": "bac"
   }
 ]

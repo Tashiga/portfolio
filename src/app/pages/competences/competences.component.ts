@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-competences',
   imports: [],
   templateUrl: './competences.component.html',
-  styleUrl: './competences.component.css'
+  styleUrl: './competences.component.css',
 })
-export class CompetencesComponent {
-
-}
+export class CompetencesComponent {}

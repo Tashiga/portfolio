@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-parcours',
   imports: [],
   templateUrl: './parcours.component.html',
-  styleUrl: './parcours.component.css'
+  styleUrl: './parcours.component.css',
 })
-export class ParcoursComponent {
-
-}
+export class ParcoursComponent {}
