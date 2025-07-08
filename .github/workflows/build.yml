@@ -1,0 +1,35 @@
+name: 🚀 Build Angular Project
+
+on:
+  push:
+    branches: [master]  # Déclenche sur chaque push dans master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Cloner le repo
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Installer Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 🗂️ Cache des dépendances
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: 📦 Installer les dépendances
+        run: npm ci
+
+      - name: 🛠️ Builder l'app Angular
+        run: npm run build
+
+      - name: ✅ Terminé !
+        run: echo "🎉 Build terminé avec succès"
