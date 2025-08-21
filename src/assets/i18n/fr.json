@@ -1,5 +1,14 @@
 {
   "portfolio-title": "Mon Portfolio",
+  "not-found": {
+    "error_404": "Erreur 404",
+    "page_title": "Page introuvable",
+    "oops": "Oups… la page que vous cherchez n’existe pas (ou plus).",
+    "back_to_home": "Retour à l’accueil",
+    "contact": "Contacter",
+    "code_404": "Code: 404 • Si le problème persiste,",
+    "let_me_know": "dites-le moi"
+  },
   "home": {
     "welcome": "Bienvenue sur mon portfolio",
     "discover": "Découvrir mon parcours",
@@ -25,6 +34,23 @@
   "language": {
     "fr": "Français",
     "en": "Anglais"
+  },
+  "skills": {
+    "title": "Compétences",
+    "languages": "Langages",
+    "languages_list": "Java, JavaScript, TypeScript, Python, PHP, SQL, HTML, CSS",
+    "framework": "Frameworks & Bibliothèques",
+    "framework_list": "Angular, Spring Boot, Node.js, Express, Bootstrap, TailwindCSS",
+    "databases": "Bases de données",
+    "databases_list": "MySQL, PostgreSQL, MongoDB, SQLite",
+    "tools": "Outils & Méthodologies",
+    "tools_list": "Git, GitHub/GitLab, GitHub Actions, Jira, OpenProject, Méthodes Agile & Lean Startup, CI/CD",
+    "test": "Tests & Qualité",
+    "test_list": "JUnit (Java), Jest (JS/TS), ESLint, Prettier, Swagger, Postman",
+    "deployment": "Déploiement & Cloud",
+    "deployment_list": "Docker, Docker Compose, Firebase, Heroku, AWS (bases)",
+    "design": "Design & Création",
+    "design_list": "Figma, Photoshop, Premiere Pro"
   },
   "download-cv": "Télécharger mon CV :"
 }

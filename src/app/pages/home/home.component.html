@@ -18,7 +18,7 @@
 
 <section
   id="about"
-  class="mt-32 px-6 py-20 max-w-4xl mx-auto text-white bg-gray-800 rounded-2xl shadow-lg"
+  class="mt-32 px-6 py-20 max-w-5xl mx-auto text-white bg-gray-800 rounded-2xl shadow-lg"
 >
   <h2 class="text-3xl font-bold mb-6 text-blue-400">
     {{ 'about.title' | translate }}
@@ -34,7 +34,7 @@
 
 <section
   id="parcours"
-  class="mt-32 px-6 py-20 max-w-4xl mx-auto text-white bg-gray-800 rounded-2xl shadow-lg"
+  class="mt-32 px-6 py-20 max-w-5xl mx-auto text-white bg-gray-800 rounded-2xl shadow-lg"
 >
   <h2 class="text-3xl font-bold mb-10 text-blue-400 text-center">
     {{ 'home.journey' | translate }}
@@ -55,8 +55,25 @@
   </ul>
 </section>
 
-<section id="download" class="mt-12">
-  <div class="max-w-4xl mx-auto bg-gray-800 text-white rounded-2xl p-6 sm:p-8 shadow-lg">
+<section
+  id="skills"
+  class="mt-32 px-6 py-20 max-w-5xl mx-auto text-white bg-gray-800 rounded-2xl shadow-lg"
+>
+  <h2 class="text-3xl font-bold mb-8 text-blue-400">{{ 'skills.title' | translate }}</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div *ngFor="let skill of skills">
+      <h3 class="text-xl font-semibold text-blue-300 mb-3">{{ skill.title | translate }}</h3>
+      <p class="text-gray-300">{{ skill.description | translate }}</p>
+    </div>
+  </div>
+</section>
+
+<section
+  id="download"
+  class="mt-32 max-w-5xl mx-auto bg-gray-800 text-white rounded-2xl px-6 py-20 sm:p-8 shadow-lg"
+>
+  <div>
     <div class="flex flex-col sm:flex-row sm:items-center gap-4">
       <span class="text-lg font-medium">{{ 'download-cv' | translate }}</span>
       <div class="sm:ml-auto">
@@ -86,8 +103,11 @@
   </div>
 </section>
 
-<section id="contacts" class="mt-12">
-  <div class="max-w-4xl mx-auto bg-gray-800 text-white rounded-2xl p-6 sm:p-8 shadow-lg">
+<section
+  id="contacts"
+  class="mt-12 max-w-5xl mx-auto bg-gray-800 text-white rounded-2xl p-6 sm:p-8 shadow-lg"
+>
+  <div>
     <div class="container mx-auto flex justify-center">
       <a
         class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-transform transform hover:scale-105"

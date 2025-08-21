@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ParcoursService, EtapeParcours } from '../../services/parcours.service';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { EtapeSkills, SkillsService } from '../../services/skills.service';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +20,9 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('container', { static: true }) container!: ElementRef;
 
   parcours: EtapeParcours[] = [];
+  skills: EtapeSkills[] = [];
   private parcoursService = inject(ParcoursService);
+  private skillsService = inject(SkillsService);
 
   ngAfterViewInit(): void {
     gsap.context(() => {
@@ -70,6 +73,14 @@ export class HomeComponent implements AfterViewInit {
         stagger: 0.2,
       });
     });
+
+    this.skillsService
+      .getSkills()
+      // .pipe(this.destroyRef)
+      .subscribe((data) => {
+        this.skills = data;
+        console.log('skills : ', data);
+      });
   }
 
   scrollToParcours(): void {
