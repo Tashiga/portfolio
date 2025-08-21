@@ -1,4 +1,5 @@
 {
+  "portfolio-title": "Mon Portfolio",
   "home": {
     "welcome": "Bienvenue sur mon portfolio",
     "discover": "Découvrir mon parcours",
@@ -16,8 +17,14 @@
     "bac": "🎓 Baccalauréat",
     "bac_desc": "Obtention du bac, avec l’objectif clair de poursuivre des études en informatique et développer ma passion pour la tech."
   },
+  "about": {
+    "title": "À propos",
+    "description": "Diplômée d’un Mastère Dev Manager Full Stack à l’Efrei, je suis passionnée par le développement web et les technologies modernes. J’ai effectué 3 années d’alternance chez Storyzy, une entreprise spécialisée dans la lutte contre la désinformation, où j’ai participé à des projets variés : conception de tutoriels interactifs, développement front-end en Angular et maintenance back-end en Java.",
+    "search-for": "Je recherche aujourd’hui un CDI en tant que développeuse full-stack, avec la volonté de contribuer à des projets utiles, aussi bien dans le secteur privé que dans des environnements institutionnels tels que les commissariats."
+  },
   "language": {
     "fr": "Français",
     "en": "Anglais"
-  }
+  },
+  "download-cv": "Télécharger mon CV :"
 }

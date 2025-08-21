@@ -76,6 +76,10 @@ export class HomeComponent implements AfterViewInit {
     document.getElementById('parcours')?.scrollIntoView({ behavior: 'smooth' });
   }
 
+  scrollToAbout(): void {
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   extractYear(annee: string): number {
     if (annee.toLowerCase().includes('aujourd')) return 9999;
     const matches = annee.match(/\d{4}/g);

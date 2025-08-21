@@ -1,4 +1,5 @@
 {
+  "portfolio-title": "My Portfolio",
   "home": {
     "welcome": "Welcome to my portfolio",
     "discover": "Discover my journey",
@@ -16,8 +17,14 @@
     "bac": "🎓 High School Diploma",
     "bac_desc": "Graduated from high school with a clear goal of pursuing studies in computer science and growing my passion for tech."
   },
+  "about": {
+    "title": "About me",
+    "description": "Graduate of a Master’s degree in Full-Stack Development Management at Efrei, I am passionate about web development and modern technologies. I completed 3 years of work-study at Storyzy, a company specialized in the fight against disinformation, where I contributed to projects such as interactive tutorials, front-end development with Angular, and back-end maintenance in Java.",
+    "search-for": "I am currently looking for a full-time permanent position as a Full-Stack Developer, with the aim of contributing to meaningful projects in both the private sector and institutional environments such as police departments."
+  },
   "language": {
     "fr": "French",
     "en": "English"
-  }
+  },
+  "download-cv": "Download my CV :"
 }
