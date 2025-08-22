@@ -76,9 +76,10 @@ jobs:
           name: dist
           path: dist
 
-      - name: 🚀 Publier sur gh-pages
+      - name: 🚀 Publier sur gh-pages 
         uses: peaceiris/actions-gh-pages@v4
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}   # ⬅️ AJOUT
           publish_branch: gh-pages
           publish_dir: dist
           force_orphan: true
