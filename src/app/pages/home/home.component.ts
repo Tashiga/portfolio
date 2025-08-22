@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild, inject } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, inject, DestroyRef } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -6,6 +6,7 @@ import { ParcoursService, EtapeParcours } from '../../services/parcours.service'
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { EtapeSkills, SkillsService } from '../../services/skills.service';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,6 +24,7 @@ export class HomeComponent implements AfterViewInit {
   skills: EtapeSkills[] = [];
   private parcoursService = inject(ParcoursService);
   private skillsService = inject(SkillsService);
+  destroyRef = inject(DestroyRef);
 
   ngAfterViewInit(): void {
     gsap.context(() => {
@@ -57,30 +59,30 @@ export class HomeComponent implements AfterViewInit {
         );
     }, this.container.nativeElement);
 
-    this.parcoursService.getParcours().subscribe((data) => {
-      this.parcours = data.sort((a, b) => this.extractYear(b.annee) - this.extractYear(a.annee));
+    this.parcoursService
+      .getParcours()
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((data) => {
+        this.parcours = data.sort((a, b) => this.extractYear(b.annee) - this.extractYear(a.annee));
 
-      // Animation GSAP
-      gsap.from('.etape', {
-        scrollTrigger: {
-          trigger: '#parcours',
-          start: 'top 80%',
-          toggleActions: 'play none none none',
-        },
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
+        // Animation GSAP
+        gsap.from('.etape', {
+          scrollTrigger: {
+            trigger: '#parcours',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+        });
       });
-    });
 
     this.skillsService
       .getSkills()
-      // .pipe(this.destroyRef)
-      .subscribe((data) => {
-        this.skills = data;
-        console.log('skills : ', data);
-      });
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((data) => (this.skills = data));
   }
 
   scrollToParcours(): void {
