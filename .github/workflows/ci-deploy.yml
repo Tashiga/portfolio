@@ -1,0 +1,84 @@
+name: 🚀 Build & Deploy (GitHub Pages)
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Cloner le repo
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Installer Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm' # tu peux garder ton step cache aussi si tu veux
+
+      - name: 🗂️ Cache des dépendances
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: 📦 Installer les dépendances
+        run: npm ci
+
+      # (optionnel) si tu as des scripts lint/test:
+      # - name: 🔍 Lint
+      #   run: npm run lint --if-present
+      # - name: 🧪 Tests
+      #   run: npm test --if-present -- --watch=false --browsers=ChromeHeadless
+
+      - name: 🛠️ Builder l'app Angular (prod + base-href pour Pages)
+        run: |
+          npm run build -- --configuration production --base-href /portfolio/
+          # fallback SPA pour Angular sur GitHub Pages :
+          cp dist/portfolio/browser/index.html dist/portfolio/browser/404.html
+
+      - name: 📤 Uploader l'artifact (dist)
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/portfolio/browser
+          if-no-files-found: error
+
+      - name: ✅ Terminé !
+        run: echo "🎉 Build terminé avec succès"
+
+  deploy:
+    name: 🚀 Déployer sur GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    environment:
+      name: production # -> crée "production" dans Settings > Environments et exige une approbation
+      url: https://tashiga.github.io/portfolio/
+    steps:
+      - name: ⬇️ Récupérer l'artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: 🚀 Publier sur gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_branch: gh-pages
+          publish_dir: dist
+          force_orphan: true
