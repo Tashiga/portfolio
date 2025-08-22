@@ -1,0 +1,56 @@
+{
+  "portfolio-title": "Mon Portfolio",
+  "not-found": {
+    "error_404": "Erreur 404",
+    "page_title": "Page introuvable",
+    "oops": "Oups… la page que vous cherchez n’existe pas (ou plus).",
+    "back_to_home": "Retour à l’accueil",
+    "contact": "Contacter",
+    "code_404": "Code: 404 • Si le problème persiste,",
+    "let_me_know": "dites-le moi"
+  },
+  "home": {
+    "welcome": "Bienvenue sur mon portfolio",
+    "discover": "Découvrir mon parcours",
+    "intro": "Découvre mon parcours, mes projets et mes compétences à travers une aventure interactive.",
+    "journey": "🧭 Mon parcours",
+    "today": "Aujourd'hui",
+    "lookingForJob": "🚀 En recherche d’un CDI dans le développement",
+    "lookingForJob_desc": "Motivée pour rejoindre une entreprise tech en tant que développeuse full-stack, où je pourrai valoriser mes compétences en front, back et design UX.",
+    "master": "🎓 Master Développement Full-Stack – Efrei Paris (en alternance)",
+    "master_desc": "Participation à des projets avancés en front-end Angular, tutoriels interactifs, gestion d'utilisateurs et maintenance back-end Java.",
+    "licence": "🧪 Licence Pro – Conception, Développement, Test de Logiciels (en alternance)",
+    "licence_desc": "Mise en œuvre de nouvelles interfaces, amélioration UX et création de pages spécifiques pour des cas métiers réels.",
+    "dut": "💻 DUT Informatique – IUT de Montreuil (stage de 16 semaines)",
+    "dut_desc": "Formation solide en développement logiciel, bases de données et algorithmique. Le stage m’a permis d'intégrer une équipe produit et de découvrir les outils professionnels.",
+    "bac": "🎓 Baccalauréat",
+    "bac_desc": "Obtention du bac, avec l’objectif clair de poursuivre des études en informatique et développer ma passion pour la tech."
+  },
+  "about": {
+    "title": "À propos",
+    "description": "Diplômée d’un Mastère Dev Manager Full Stack à l’Efrei, je suis passionnée par le développement web et les technologies modernes. J’ai effectué 3 années d’alternance chez Storyzy, une entreprise spécialisée dans la lutte contre la désinformation, où j’ai participé à des projets variés : conception de tutoriels interactifs, développement front-end en Angular et maintenance back-end en Java.",
+    "search-for": "Je recherche aujourd’hui un CDI en tant que développeuse full-stack, avec la volonté de contribuer à des projets utiles, aussi bien dans le secteur privé que dans des environnements institutionnels tels que les commissariats."
+  },
+  "language": {
+    "fr": "Français",
+    "en": "Anglais"
+  },
+  "skills": {
+    "title": "Compétences",
+    "languages": "Langages",
+    "languages_list": "Java, JavaScript, TypeScript, Python, PHP, SQL, HTML, CSS",
+    "framework": "Frameworks & Bibliothèques",
+    "framework_list": "Angular, Spring Boot, Node.js, Express, Bootstrap, TailwindCSS",
+    "databases": "Bases de données",
+    "databases_list": "MySQL, PostgreSQL, MongoDB, SQLite",
+    "tools": "Outils & Méthodologies",
+    "tools_list": "Git, GitHub/GitLab, GitHub Actions, Jira, OpenProject, Méthodes Agile & Lean Startup, CI/CD",
+    "test": "Tests & Qualité",
+    "test_list": "JUnit (Java), Jest (JS/TS), ESLint, Prettier, Swagger, Postman",
+    "deployment": "Déploiement & Cloud",
+    "deployment_list": "Docker, Docker Compose, Firebase, Heroku, AWS (bases)",
+    "design": "Design & Création",
+    "design_list": "Figma, Photoshop, Premiere Pro"
+  },
+  "download-cv": "Télécharger mon CV :"
+}
