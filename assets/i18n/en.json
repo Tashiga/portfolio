@@ -1,0 +1,60 @@
+{
+  "portfolio-title": "My Portfolio",
+  "not-found": {
+    "error_404": "Error 404",
+    "page_title": "Page not found",
+    "oops": "Oops… the page you are looking for does not exist (or no longer exists).",
+    "back_to_home": "Back to Home",
+    "contact": "Contact",
+    "code_404": "Code: 404 • If the problem persists,",
+    "let_me_know": "let me know"
+  },
+  "home": {
+    "welcome": "Welcome to my portfolio",
+    "discover": "Discover my journey",
+    "intro": "Discover my journey, projects, and skills through an interactive adventure.",
+    "journey": "🧭 My Journey",
+    "lookingForJob": "🚀 Actively seeking a full-time developer position",
+    "today": "Today",
+    "lookingForJob_desc": "Motivated to join a tech company as a full-stack developer, where I can leverage my skills in front-end, back-end, and UX design.",
+    "master": "🎓 Master's in Full-Stack Development – Efrei Paris (work-study)",
+    "master_desc": "Involved in advanced Angular front-end projects, interactive tutorials, user management, and Java back-end maintenance.",
+    "licence": "🧪 Bachelor's in Software Design, Development and Testing (work-study)",
+    "licence_desc": "Implemented new interfaces, improved UX, and created dedicated pages for real-world business use cases.",
+    "dut": "💻 Associate Degree in Computer Science – IUT of Montreuil (16-week internship)",
+    "dut_desc": "Strong foundation in software development, databases, and algorithms. The internship allowed me to join a product team and explore professional tools.",
+    "bac": "🎓 High School Diploma",
+    "bac_desc": "Graduated from high school with a clear goal of pursuing studies in computer science and growing my passion for tech."
+  },
+  "about": {
+    "title": "About me",
+    "description": "Graduated with a Master’s degree in Full Stack Development Management from Efrei, I am passionate about web development. I enjoy creating high-performance, intuitive, and well-structured applications. My goal is to contribute to innovative projects where technology and user experience move forward together.",
+    "experiences" : "I completed 3-year of work-study program at Storyzy, a company specialized in fighting misinformation, where I took part in various projects such as designing interactive tutorials, front-end development with Angular, and back-end maintenance in Java.", 
+    "search-for": "I am currently looking for a full-time permanent position as a Full-Stack Developer, with the aim of contributing to meaningful projects in both the private sector and institutional environments such as police departments."
+  },
+  "language": {
+    "fr": "French",
+    "en": "English"
+  },
+  "skills": {
+    "title": "Skills",
+    "languages": "Languages",
+    "languages_list": "Java, JavaScript, TypeScript, Python, PHP, SQL, HTML, CSS",
+    "framework": "Frameworks & Libraries",
+    "framework_list": "Angular, Spring Boot, Node.js, Express, Bootstrap, TailwindCSS",
+    "databases": "Databases",
+    "databases_list": "MySQL, PostgreSQL, MongoDB, SQLite",
+    "tools": "Tools & Methodologies",
+    "tools_list": "Git, GitHub/GitLab, GitHub Actions, Jira, OpenProject, Agile & Lean Startup methods, CI/CD",
+    "test": "Testing & Quality",
+    "test_list": "JUnit (Java), Jest (JS/TS), ESLint, Prettier, Swagger, Postman",
+    "deployment": "Deployment & Cloud",
+    "deployment_list": "Docker, Docker Compose, Firebase, Heroku, AWS (basics)",
+    "design": "Design & Creation",
+    "design_list": "Figma, Photoshop, Premiere Pro"
+  },
+  "experiences" : {
+    "title" : "Professional Experience"
+  },
+  "download-cv": "Download my CV"
+}
