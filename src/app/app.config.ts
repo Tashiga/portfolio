@@ -7,6 +7,7 @@ import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { provideTranslateService } from '@ngx-translate/core';
 import { TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 // 👇 Fonction qui crée le loader à partir du HttpClient
 export function HttpLoaderFactory(http: HttpClient): TranslateLoader {
@@ -26,5 +27,6 @@ export const appConfig: ApplicationConfig = {
         deps: [HttpClient],
       },
     }),
+    provideAnimations()
   ],
 };

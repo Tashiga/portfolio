@@ -28,7 +28,8 @@
   },
   "about": {
     "title": "About me",
-    "description": "Graduate of a Master’s degree in Full-Stack Development Management at Efrei, I am passionate about web development and modern technologies. I completed 3 years of work-study at Storyzy, a company specialized in the fight against disinformation, where I contributed to projects such as interactive tutorials, front-end development with Angular, and back-end maintenance in Java.",
+    "description": "Graduated with a Master’s degree in Full Stack Development Management from Efrei, I am passionate about web development. I enjoy creating high-performance, intuitive, and well-structured applications. My goal is to contribute to innovative projects where technology and user experience move forward together.",
+    "experiences" : "I completed 3-year of work-study program at Storyzy, a company specialized in fighting misinformation, where I took part in various projects such as designing interactive tutorials, front-end development with Angular, and back-end maintenance in Java.", 
     "search-for": "I am currently looking for a full-time permanent position as a Full-Stack Developer, with the aim of contributing to meaningful projects in both the private sector and institutional environments such as police departments."
   },
   "language": {
@@ -52,5 +53,8 @@
     "design": "Design & Creation",
     "design_list": "Figma, Photoshop, Premiere Pro"
   },
-  "download-cv": "Download my CV :"
+  "experiences" : {
+    "title" : "Professional Experience"
+  },
+  "download-cv": "Download my CV"
 }

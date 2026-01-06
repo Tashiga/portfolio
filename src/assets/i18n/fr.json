@@ -28,7 +28,8 @@
   },
   "about": {
     "title": "À propos",
-    "description": "Diplômée d’un Mastère Dev Manager Full Stack à l’Efrei, je suis passionnée par le développement web et les technologies modernes. J’ai effectué 3 années d’alternance chez Storyzy, une entreprise spécialisée dans la lutte contre la désinformation, où j’ai participé à des projets variés : conception de tutoriels interactifs, développement front-end en Angular et maintenance back-end en Java.",
+    "description": "Diplômée d’un Mastère Dev Manager Full Stack à l’Efrei, je suis passionnée par le développement web. J'aime concevoir des applications performantes, intuitives et bien structurées. Mon objectif : contribuer à des projets innovants où technique et UX avancent ensemble.",
+    "experiences" : "J’ai effectué 3 années d’alternance chez Storyzy, une entreprise spécialisée dans la lutte contre la désinformation, où j’ai participé à des projets variés : conception de tutoriels interactifs, développement front-end en Angular et maintenance back-end en Java.",
     "search-for": "Je recherche aujourd’hui un CDI en tant que développeuse full-stack, avec la volonté de contribuer à des projets utiles, aussi bien dans le secteur privé que dans des environnements institutionnels tels que les commissariats."
   },
   "language": {
@@ -52,5 +53,8 @@
     "design": "Design & Création",
     "design_list": "Figma, Photoshop, Premiere Pro"
   },
-  "download-cv": "Télécharger mon CV :"
+  "experiences" : {
+    "title" : "Expériences professionnelles"
+  },
+  "download-cv": "Télécharger mon CV"
 }

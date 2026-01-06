@@ -1,8 +1,7 @@
-<section
-  class="full-bleed min-h-screen w-screen flex flex-col justify-center items-center bg-gray-900 text-white px-4"
-  #container
->
-  <h1 class="text-5xl font-extrabold text-center mb-4 leading-tight intro-title">
+<div
+    class="full-bleed min-h-screen w-screen flex flex-col justify-center items-center text-white px-4"
+    #container>
+  <h1 class="text-4xl font-extrabold text-center mb-4 leading-tight intro-title">
     {{ 'home.welcome' | translate }}
   </h1>
   <p class="text-xl text-center max-w-xl intro-subtitle">
@@ -10,123 +9,32 @@
   </p>
   <button
     class="mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-white text-lg font-semibold transition-all duration-300 intro-button"
-    (click)="scrollToParcours()"
-  >
+    (click)="scrollToPortfolio()">
     {{ 'home.discover' | translate }}
   </button>
-</section>
+</div>
 
-<section
-  id="about"
-  class="mt-32 px-6 py-20 max-w-5xl mx-auto text-white bg-gray-800 rounded-2xl shadow-lg"
->
-  <h2 class="text-3xl font-bold mb-6 text-blue-400">
-    {{ 'about.title' | translate }}
-  </h2>
-  <p class="text-gray-300 leading-relaxed text-lg text-justify">
-    {{ 'about.description' | translate }}
-  </p>
-  <br />
-  <p class="text-gray-300 leading-relaxed text-lg text-justify">
-    {{ 'about.search-for' | translate }}
-  </p>
-</section>
-
-<section
-  id="parcours"
-  class="mt-32 px-6 py-20 max-w-5xl mx-auto text-white bg-gray-800 rounded-2xl shadow-lg"
->
-  <h2 class="text-3xl font-bold mb-10 text-blue-400 text-center">
-    {{ 'home.journey' | translate }}
-  </h2>
-
-  <ul class="space-y-8 border-l-2 border-blue-500 pl-6">
-    <li *ngFor="let etape of parcours" class="etape relative">
-      <div
-        class="absolute -left-[1.1rem] top-1 w-4 h-4 bg-blue-400 rounded-full border-2 border-white"
-      ></div>
-
-      <span class="text-sm text-blue-300 font-medium">
-        {{ etape.annee === 'Aujourd’hui' ? ('home.today' | translate) : etape.annee }}
-      </span>
-      <h3 class="text-xl font-semibold mt-1">{{ 'home.' + etape.titre | translate }}</h3>
-      <p class="text-gray-300 mt-1">{{ 'home.' + etape.titre + '_desc' | translate }}</p>
-    </li>
-  </ul>
-</section>
-
-<section
-  id="skills"
-  class="mt-32 px-6 py-20 max-w-5xl mx-auto text-white bg-gray-800 rounded-2xl shadow-lg"
->
-  <h2 class="text-3xl font-bold mb-8 text-blue-400">{{ 'skills.title' | translate }}</h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div *ngFor="let skill of skills">
-      <h3 class="text-xl font-semibold text-blue-300 mb-3">{{ skill.title | translate }}</h3>
-      <p class="text-gray-300">{{ skill.description | translate }}</p>
-    </div>
-  </div>
-</section>
-
-<section
-  id="download"
-  class="mt-32 max-w-5xl mx-auto bg-gray-800 text-white rounded-2xl px-6 py-20 sm:p-8 shadow-lg"
->
-  <div>
-    <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-      <span class="text-lg font-medium">{{ 'download-cv' | translate }}</span>
-      <div class="sm:ml-auto">
-        <a
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-md transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800"
-          href="assets/cv/cv_test.pdf"
-          download="Sashtiga_Sasirajah_CV.pdf"
-          target="_blank"
-          rel="noopener"
-          aria-label="Télécharger le CV (PDF)"
-        >
-          <svg
-            class="w-5 h-5 fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              d="M19 9h-4l-2-2H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 
-            2-2V11c0-1.1-.9-2-2-2zm-7 9l-5-5h3V9h4v4h3l-5 5z"
-            />
-          </svg>
-          <span class="font-semibold">CV</span>
-        </a>
+<div id="portfolio">
+  <div class="mt-32 max-w-7xl mx-auto px-4">
+    <div class="relative transition-all duration-300 md:pl-[30px] flex gap-6">
+      <aside class="hidden md:block sticky top-20 w-[280px] left-10 h-fit">
+        <div class="scale-1">
+          <app-profil></app-profil>
+        </div>
+      </aside>
+      <div class="min-h-[150vh] pl-16 mt-24" #sections>
+        <app-about></app-about>
+        <app-journey></app-journey>
+        <app-skills></app-skills>
+        <app-professional-experience></app-professional-experience>
+      </div>
+      <div class="fixed bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded text-sm">
+        <button *ngIf="!atTop"
+          (click)="scrollToTop()"
+          class="fixed bottom-6 right-6 rounded-full p-1 
+          text-3xl bg-blue-600 text-white shadow-lg"
+          > ↑ </button>
       </div>
     </div>
   </div>
-</section>
-
-<section
-  id="contacts"
-  class="mt-12 max-w-5xl mx-auto bg-gray-800 text-white rounded-2xl p-6 sm:p-8 shadow-lg"
->
-  <div>
-    <div class="container mx-auto flex justify-center">
-      <a
-        class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-transform transform hover:scale-105"
-        href="https://www.linkedin.com/in/sashtiga-sasirajah-8187a5199/"
-        target="_blank"
-        rel="noopener"
-      >
-        <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path
-            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 
-          0 53.9a53.9 53.9 0 11107.8 0c0 29.6-24.09 54.2-53.99 
-          54.2zM447.9 448h-92.4V302.4c0-34.7-12.5-58.4-43.8-58.4-23.9 
-          0-38.2 16.1-44.5 31.6-2.3 5.5-2.9 13.1-2.9 
-          20.8V448h-92.4s1.2-270.5 0-299.1h92.4v42.4c12.3-19 
-          34.4-46.1 83.8-46.1 61.2 0 107.4 39.9 
-          107.4 125.5V448z"
-          />
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
+</div>

@@ -1,4 +1,4 @@
-import { Component, HostListener, signal } from '@angular/core';
+import { AfterViewInit, Component, HostListener, signal } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NgClass, NgFor } from '@angular/common';
 import { DEFAULT_LANG, LANGUAGES } from '../../constants';
@@ -8,7 +8,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [NgClass, NgFor, TranslateModule, RouterLink, RouterLinkActive],
+  imports: [NgClass, NgFor, TranslateModule, RouterLink, 
+    // RouterLinkActive
+  ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
@@ -16,6 +18,7 @@ export class NavbarComponent {
   currentLang: string = DEFAULT_LANG;
   languages = LANGUAGES;
   private translate = inject(TranslateService);
+  private scrollHost: HTMLElement | Window | null = null;
 
   compact = signal(false);
 
@@ -70,5 +73,27 @@ export class NavbarComponent {
 
   setLanguage(lang: string) {
     this.translate.use(lang);
+  }
+
+  scrollToParcours(): void {
+    document.getElementById('parcours')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  scrollToAbout(): void {
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  scrollToItem(item: string): void {
+    if(item) {
+      document.getElementById(item)?.scrollIntoView({behavior: 'smooth'});
+    }
+  }
+
+  scrollTop() {
+    const host = this.scrollHost;
+    if (!host || host === window)
+      window.scrollTo({ top: top ? 0 : 283, behavior: 'smooth' });
+    else
+      (host as HTMLElement).scrollTo({ top: top ? 0 : 283, behavior: 'smooth' });
   }
 }

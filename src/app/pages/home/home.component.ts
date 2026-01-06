@@ -1,102 +1,121 @@
-import { Component, AfterViewInit, ElementRef, ViewChild, inject, DestroyRef } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { AfterViewInit, Component, DestroyRef, ElementRef, inject, ViewChild } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ParcoursService, EtapeParcours } from '../../services/parcours.service';
-import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
-import { EtapeSkills, SkillsService } from '../../services/skills.service';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { NgIf } from '@angular/common';
+import { AboutComponent } from '../../components/about/about.component';
+import { JourneyComponent } from '../../components/journey/journey.component';
+import { SkillsComponent } from '../../components/skills/skills.component';
+import { ProfessionalExperienceComponent } from '../../components/professional-experience/professional-experience.component';
+import { ProfilComponent } from '../../components/profil/profil.component';
 
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home',
-  standalone: true,
-  imports: [HttpClientModule, CommonModule, TranslateModule],
+  imports: [
+    TranslateModule,
+    ProfilComponent,
+    AboutComponent,
+    JourneyComponent,
+    SkillsComponent,
+    ProfessionalExperienceComponent,
+    NgIf,
+  ],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrl: './home.component.css'
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit{
+  @ViewChild('sections', { static: true }) sections!: ElementRef<HTMLElement>;
   @ViewChild('container', { static: true }) container!: ElementRef;
-
-  parcours: EtapeParcours[] = [];
-  skills: EtapeSkills[] = [];
-  private parcoursService = inject(ParcoursService);
-  private skillsService = inject(SkillsService);
+  sectionActive = false;
   destroyRef = inject(DestroyRef);
+  private scrollHost: HTMLElement | Window | null = null;
+  atTop: boolean = true;
+
+  private onScroll = () => {
+    const host = this.scrollHost;
+    if (!host || host === window)
+      this.atTop = window.scrollY === 0;
+    else
+      this.atTop = (host as HTMLElement).scrollTop === 0;
+  };
 
   ngAfterViewInit(): void {
     gsap.context(() => {
       const tl = gsap.timeline();
-
       tl.from('.intro-title', {
-        y: -50,
-        opacity: 0,
-        duration: 1,
-        ease: 'power2.out',
-      })
+                y: -50,
+                opacity: 0,
+                duration: 1,
+                ease: 'power2.out',
+              })
         .from(
-          '.intro-subtitle',
-          {
-            y: 20,
-            opacity: 0,
-            duration: 1,
-            ease: 'power2.out',
-          },
-          '-=0.5'
-        )
+                '.intro-subtitle',
+                {
+                  y: 20,
+                  opacity: 0,
+                  duration: 1,
+                  ease: 'power2.out',
+                },
+                '-=0.5'
+              )
         .from(
-          '.intro-button',
-          {
-            scale: 0.8,
-            opacity: 0,
-            duration: 0.8,
-            ease: 'back.out(1.7)',
-            clearProps: 'opacity,scale',
-          },
-          '-=0.5'
-        );
+                '.intro-button',
+                {
+                  scale: 0.8,
+                  opacity: 0,
+                  duration: 0.8,
+                  ease: 'back.out(1.7)',
+                  clearProps: 'opacity,scale',
+                },
+                '-=0.5'
+              );
     }, this.container.nativeElement);
+    this.scrollHost = this.findScrollHost();
 
-    this.parcoursService
-      .getParcours()
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((data) => {
-        this.parcours = data.sort((a, b) => this.extractYear(b.annee) - this.extractYear(a.annee));
+    if (!this.scrollHost || this.scrollHost === window)
+      window.addEventListener('scroll', this.onScroll);
+    else
+      (this.scrollHost as HTMLElement).addEventListener('scroll', this.onScroll);
+    this.onScroll();
 
-        // Animation GSAP
-        gsap.from('.etape', {
-          scrollTrigger: {
-            trigger: '#parcours',
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-          },
-          y: 50,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.2,
-        });
-      });
-
-    this.skillsService
-      .getSkills()
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((data) => (this.skills = data));
+    this.destroyRef.onDestroy(() => {
+      const host = this.scrollHost;
+      if (!host) return;
+      if (host === window) 
+        window.removeEventListener('scroll', this.onScroll);
+      else
+        (host as HTMLElement).removeEventListener('scroll', this.onScroll);
+    });
   }
 
-  scrollToParcours(): void {
-    document.getElementById('parcours')?.scrollIntoView({ behavior: 'smooth' });
+  private findScrollHost(): HTMLElement | Window {
+    let el: HTMLElement | null = this.sections.nativeElement;
+    while (el && el.parentElement) {
+      const style = getComputedStyle(el);
+      const overflowY = style.overflowY;
+      const canScroll = el.scrollHeight > el.clientHeight;
+      if (canScroll && (overflowY === 'auto' || overflowY === 'scroll')) {
+        console.log('[ContactComponent] scrollHost trouvé :', el);
+        return el;
+      }
+      el = el.parentElement;
+    }
+    console.log('[ContactComponent] scrollHost = window');
+    return window;
   }
 
-  scrollToAbout(): void {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  scrollToPortfolio(): void {
+    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
   }
 
-  extractYear(annee: string): number {
-    if (annee.toLowerCase().includes('aujourd')) return 9999;
-    const matches = annee.match(/\d{4}/g);
-    if (matches && matches.length > 0) return Math.max(...matches.map(Number));
-    return 0;
+  scrollToTop() {
+    const host = this.scrollHost;
+    if (!host || host === window)
+      window.scrollTo({ top: top ? 0 : 283, behavior: 'smooth' });
+    else
+      (host as HTMLElement).scrollTo({ top: top ? 0 : 283, behavior: 'smooth' });
   }
+
 }
