@@ -12,16 +12,16 @@
         <img src="assets/img/leclerc_logo.webp" alt="E. Leclerc" class="w-20 h-12 rounded-md object-contain" />
         <div>
           <h3 class="text-xl font-semibold">
-            Hôtesse de caisse
-            <span class="ml-2 inline-block align-middle text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-md">CDI temps partiel</span>
+            {{ 'experiences.caisse' | translate}}
+            <span class="ml-2 inline-block align-middle text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-md">{{ 'experiences.cdi-tp' | translate}}</span>
           </h3>
 
           <!-- Entreprise + période -->
-          <p class="text-gray-600">E.Leclerc (93 – Pantin) • 8 avr. 2023 – 25 janv. 2025 • <span class="font-medium">1 an et 10 mois</span></p>
+          <p class="text-gray-600">{{ 'experiences.leclerc.lieu' | translate}}<span class="font-medium">{{ 'experiences.leclerc.time' | translate}}</span></p>
 
           <!-- Description -->
           <p class="mt-2 text-gray-700">
-            Tous les samedis • Accueil client, encaissement, gestion des paiements et assistance.
+            {{ 'experiences.leclerc.desc' | translate}}
           </p>
 
           <!-- Compétences -->
@@ -29,7 +29,7 @@
 
           <!-- Tags -->
           <div class="mt-2 flex flex-wrap gap-2">
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Gestion de la caisse</span>
+            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">{{ 'experiences.leclerc.tags' | translate}}</span>
           </div>
 
         </div>
@@ -40,24 +40,23 @@
         <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-20 h-12 rounded-md object-contain" />
         <div>
           <h3 class="text-xl font-semibold">
-            Développeuse Full-Stack — Lutte contre la désinformation
-            <span class="ml-2 inline-block align-middle text-xs font-medium bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-md">Alternance</span>
+            {{ 'experiences.dev-full-stack' | translate}}
+            <span class="ml-2 inline-block align-middle text-xs font-medium bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-md">{{ 'experiences.alt' | translate}}</span>
           </h3>
 
           <!-- Entreprise + période + durée -->
-          <p class="text-gray-600">Storyzy (75) • 25 sept. 2023 – 3 sept. 2025 • <span class="font-medium">2 ans et 1 mois</span></p>
+          <p class="text-gray-600">{{ 'experiences.sto-1.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-1.time' | translate}}</span></p>
 
           <!-- Description -->
           <p class="mt-2 text-gray-700">
-            Implémentation de fonctionnalités front & back (architecture MVC), mise à jour de la plateforme DAT,
-            amélioration continue et rédaction de documents techniques.
+            {{ 'experiences.sto-1.desc' | translate}}
           </p>
 
           <!-- Réalisations (tu peux garder) -->
           <ul class="mt-3 list-disc list-inside text-gray-700">
-            <li>Développement Angular (UX, onboarding, guided tours) & Spring Boot (API, services).</li>
-            <li>Qualité : tests, documentation, bonnes pratiques, performance.</li>
-            <li>Collaboration produit/design, suivi des versions et déploiements.</li>
+            <li>{{ 'experiences.sto-1.li-1' | translate}}</li>
+            <li>{{ 'experiences.sto-1.li-2' | translate}}</li>
+            <li>{{ 'experiences.sto-1.li-3' | translate}}</li>
           </ul>
 
           <!-- Tags -->
@@ -76,17 +75,17 @@
         <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-20 h-12 rounded-md object-contain" />
         <div>
           <h3 class="text-xl font-semibold">
-            Développeuse Full-Stack — Lutte contre la désinformation
-            <span class="ml-2 inline-block align-middle text-xs font-medium bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-md">Alternance</span>
+            {{ 'experiences.dev-full-stack' | translate}}
+            <span class="ml-2 inline-block align-middle text-xs font-medium bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-md">{{ 'experiences.alt' | translate}}</span>
           </h3>
 
           <!-- Entreprise + période + durée -->
-          <p class="text-gray-600">Storyzy (75) • 26 sept. 2022 – 22 sept. 2023 • <span class="font-medium">1 an et 1 mois</span></p>
+          <p class="text-gray-600">{{ 'experiences.sto-2.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-2.time' | translate}}</span></p>
 
           <ul class="mt-3 list-disc list-inside text-gray-700">
-            <li>Développement front et back (architecture MVC)</li>
-            <li>Intégrations UI (User Interface)</li>
-            <li>Maintenance du code, corrections de bugs et ajout de petites fonctionnalités</li>
+            <li>{{ 'experiences.sto-2.li-1' | translate}}</li>
+            <li>{{ 'experiences.sto-2.li-2' | translate}}</li>
+            <li>{{ 'experiences.sto-2.li-3' | translate}}</li>
           </ul>
 
           <!-- Tags -->
@@ -104,16 +103,16 @@
         <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-20 h-12 rounded-md object-contain"/>
         <div>
           <h3 class="text-xl font-semibold">
-            Développeuse Full-Stack — Lutte contre la désinformation
-            <span class="ml-2 inline-block align-middle text-xs font-medium bg-amber-100 text-amber-700 px-2 py-0.5 rounded-md">CDD</span>
+            {{ 'experiences.dev-full-stack' | translate}}
+            <span class="ml-2 inline-block align-middle text-xs font-medium bg-amber-100 text-amber-700 px-2 py-0.5 rounded-md">{{ 'experiences.cdd' | translate}}</span>
           </h3>
 
           <!-- Entreprise + période + durée -->
-          <p class="text-gray-600">Storyzy (75) • 25 juillet – 24 septembre 2022 • <span class="font-medium">3 mois</span></p>
+          <p class="text-gray-600">{{ 'experiences.sto-3.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-3.time' | translate}}</span></p>
 
           <!-- Description courte -->
           <p class="mt-2 text-gray-700">
-            Correctifs, petites features, intégrations UI et optimisation.
+            {{ 'experiences.sto-3.desc' | translate}}
           </p>
 
           <!-- Tags -->
@@ -129,13 +128,12 @@
       <div class="bg-white text-gray-900 shadow-lg rounded-xl p-6 flex gap-6 items-start">
           <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-20 h-12 rounded-md object-contain"/>
           <div>
-            <h3 class="text-xl font-semibold">Développeuse Full-Stack — Lutte contre la désinformation
-              <span class="ml-2 inline-block align-middle text-xs font-medium bg-sky-100 text-sky-700 px-2 py-0.5 rounded-md">Stage</span>
+            <h3 class="text-xl font-semibold">{{ 'experiences.dev-full-stack' | translate}}
+              <span class="ml-2 inline-block align-middle text-xs font-medium bg-sky-100 text-sky-700 px-2 py-0.5 rounded-md">{{ 'experiences.stage' | translate}}</span>
             </h3>
-            <p class="text-gray-600">Storyzy (75) • 04 avril – 22 juillet 2022 • <span class="font-medium">16 semaines</span></p>
+            <p class="text-gray-600">{{ 'experiences.sto-4.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-4.time' | translate}}</span></p>
             <p class="mt-2 text-gray-700">
-              Développement initial et montée en compétences sur Java / Angular, participation aux premières
-              fonctionnalités de la plateforme.
+              {{ 'experiences.sto-4.desc' | translate}}
             </p>
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Java</span>

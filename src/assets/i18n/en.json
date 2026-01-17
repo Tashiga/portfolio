@@ -11,25 +11,25 @@
   },
   "home": {
     "welcome": "Welcome to my portfolio",
-    "discover": "Discover my journey",
-    "intro": "Discover my journey, projects, and skills through an interactive adventure.",
+    "discover": "Discover",
+    "intro": "Discover my background, skills and experience through a smooth and visual exploration.",
     "journey": "🧭 My Journey",
     "lookingForJob": "🚀 Actively seeking a full-time developer position",
     "today": "Today",
-    "lookingForJob_desc": "Motivated to join a tech company as a full-stack developer, where I can leverage my skills in front-end, back-end, and UX design.",
-    "master": "🎓 Master's in Full-Stack Development – Efrei Paris (work-study)",
-    "master_desc": "Involved in advanced Angular front-end projects, interactive tutorials, user management, and Java back-end maintenance.",
-    "licence": "🧪 Bachelor's in Software Design, Development and Testing (work-study)",
-    "licence_desc": "Implemented new interfaces, improved UX, and created dedicated pages for real-world business use cases.",
-    "dut": "💻 Associate Degree in Computer Science – IUT of Montreuil (16-week internship)",
-    "dut_desc": "Strong foundation in software development, databases, and algorithms. The internship allowed me to join a product team and explore professional tools.",
+    "lookingForJob_desc": "Motivated to join a tech company as a full-stack developer, where I can leverage my skills in front-end, back-end and UX design.",
+    "master": "🎓 Master's degree in Full-Stack Development – Efrei Paris (apprenticeship)",
+    "master_desc": "Involved in advanced Angular front-end projects, interactive tutorials, user management and Java back-end maintenance.",
+    "licence": "🧪 Bachelor's in Software Design, Development and Testing (apprenticeship)",
+    "licence_desc": "Implemented new interfaces, improved UX and created dedicated pages for real-world business use cases.",
+    "dut": "💻 Associate Degree in Computer Science – IUT of Montreuil (16-weeks internship)",
+    "dut_desc": "Strong foundation in software development, databases and algorithms. The internship allowed me to join a product team and explore professional tools.",
     "bac": "🎓 High School Diploma",
     "bac_desc": "Graduated from high school with a clear goal of pursuing studies in computer science and growing my passion for tech."
   },
   "about": {
     "title": "About me",
-    "description": "Graduated with a Master’s degree in Full Stack Development Management from Efrei, I am passionate about web development. I enjoy creating high-performance, intuitive, and well-structured applications. My goal is to contribute to innovative projects where technology and user experience move forward together.",
-    "experiences" : "I completed 3-year of work-study program at Storyzy, a company specialized in fighting misinformation, where I took part in various projects such as designing interactive tutorials, front-end development with Angular, and back-end maintenance in Java.", 
+    "description": "Graduated with a Master’s degree in Full Stack Development Management from Efrei, I am passionate about web development. I enjoy creating high-performance, intuitive and well-structured applications. My goal is to contribute to innovative projects where technology and user experience move forward together.",
+    "experiences" : "I completed a 3 year apprenticeship program at Storyzy, a company specialized in fighting misinformation, where I took part in various projects such as designing interactive tutorials, front-end development with Angular and back-end maintenance in Java.", 
     "search-for": "I am currently looking for a full-time permanent position as a Full-Stack Developer, with the aim of contributing to meaningful projects in both the private sector and institutional environments such as police departments."
   },
   "language": {
@@ -54,7 +54,60 @@
     "design_list": "Figma, Photoshop, Premiere Pro"
   },
   "experiences" : {
-    "title" : "Professional Experience"
+    "title" : "Professional Experience",
+    "caisse" : "Cashier",
+    "cdi-tp" : "Permanent part-time position",
+    "dev-full-stack" : "Full-Stack Developer — Disinformation Analysis Platform",
+    "alt" : "Apprenticeship",
+    "cdd" : "Fixed-term contract",
+    "stage" : "Internship",
+    "leclerc": {
+      "lieu": "E.Leclerc (93 – Pantin) • Apr 8, 2023 – Jan 25, 2025 • ",
+      "time": "1 year 10 months",
+      "desc" : "Every Saturday • Customer service, cashier duties, payment processing and assistance.",
+      "tags" : "Cash handling"
+    },
+    "sto-1": {
+      "lieu" : "Storyzy (75 - Paris) • Sep 25, 2023 – Sep 3, 2025 • ",
+      "time" : "2 years and 1 month",
+      "desc" : "Implementation of frontend and backend features (MVC architecture), DAT platform updates, continuous improvement and technical documentation writing.",
+      "li-1" : "Angular development (UX, onboarding, guided tours) & Spring Boot (APIs, services).",
+      "li-2" : "Quality: testing, documentation, best practices and performance.",
+      "li-3" : "Product and design collaboration, version tracking and deployments."
+    },
+    "sto-2": {
+      "lieu" : "Storyzy (75) • Sep 26, 2022 – Sep 22, 2023 • ",
+      "time" : "1 year and 1 month",
+      "li-1" : "Frontend and backend development (MVC architecture)",
+      "li-2" : "UI integrations (User Interface)",
+      "li-3" : "Code maintenance, bug fixes and implementation of small features"
+    },
+    "sto-3": {
+      "lieu" : "Storyzy (75) • Jul 25 – Sep 24, 2022 •",
+      "time" : "3 months",
+      "desc" : "Bug fixes, small features, UI integrations and optimizations."
+    },
+    "sto-4": {
+      "lieu" : "Storyzy (75 - Paris) • Apr 4 – Jul 22, 2022 • ",
+      "time" : "16 weeks",
+      "desc" : "Initial development and skill building in Java and Angular, contributing to the first features of the platform."
+    }
   },
-  "download-cv": "Download my CV"
+  "navbar" : {
+    "profil" : "Profile",
+    "parcours" : "Background",
+    "skills" : "Skills",
+    "exp" : "Experience"
+  },
+  "profil" : {
+    "dev" : "Full-Stack Developer",
+    "poste" : "Full-Stack Developer",
+    "dispo" : "Available Immediately",
+    "mat" : {
+      "linkedin": "View my LinkedIn profile",
+      "github" : "View my GitHub profile",
+      "cv" : "Download my CV (PDF)",
+      "mail" : "Email"
+    }
+  }
 }

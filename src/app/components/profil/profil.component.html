@@ -6,7 +6,7 @@
             alt="Photo de profil"
             class="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-gray-700"/>
         <div>
-            <p class="text-2xl text-blue-300 font-bold leading-tight">Développeuse Full-Stack</p>
+            <p class="text-2xl text-blue-300 font-bold leading-tight">{{ 'profil.dev' | translate }}</p>
             <h2 class="text-2xl font-bold leading-tight">Sashtiga Sasirajah</h2>
         </div>
     </div>
@@ -15,8 +15,8 @@
         <li>📍 Île-de-France, France</li>
         <li>📞 07 81 69 85 02</li>
         <li>📧 sasisashtiga2002{{'@'}}gmail.com</li>
-        <li>💼 Poste visé : Full-Stack</li>
-        <li>🕐 Dispo : Immédiate</li>
+        <li>💼 {{ 'profil.poste' | translate }}</li>
+        <li>🕐 {{ 'profil.dispo' | translate }}</li>
     </ul>
 
     <div>
@@ -26,7 +26,7 @@
                 href="https://www.linkedin.com/in/sashtiga-sasirajah-8187a5199/"
                 target="_blank"
                 rel="noopener"
-                matTooltip="Voir mon profil linkedin">
+                matTooltip="{{ 'profil.mat.linkedin' | translate }}">
                 <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path
                     d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 
@@ -45,7 +45,7 @@
                 href="https://github.com/Tashiga"
                 target="_blank"
                 rel="noopener"
-                matTooltip="Voir mon profil github"
+                matTooltip="{{ 'profil.mat.github' | translate }}"
             >
                 <svg
                 class="w-6 h-6 fill-current"
@@ -89,7 +89,7 @@
                 target="_blank"
                 rel="noopener"
                 aria-label="Télécharger le CV (PDF)"
-                matTooltip="{{ 'download-cv' | translate }}"
+                matTooltip="{{ 'profil.mat.cv' | translate }}"
             >
                 <svg
                 class="w-5 h-5 fill-current"
@@ -107,7 +107,7 @@
 
             <a href="mailto:sasisashtiga2002@gmail.com" 
             class="inline-flex items-center gap-1 px-6 py-3 rounded-xl bg-gray-800 hover:bg-gray-900 text-white shadow-lg transition-transform transform hover:scale-105"
-            matTooltip="Mail">
+            matTooltip="{{ 'profil.mat.mail' | translate }}">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                 <path d="M2.01 6.06A2 2 0 0 1 4 5h16a2 2 0 0 1 1.99 1.94L22 18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6.06zm2 .94v.01L12 13l7.99-6.01H4z"/>
                 </svg>

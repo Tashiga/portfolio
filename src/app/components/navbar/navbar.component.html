@@ -3,22 +3,22 @@
   duration-300 motion-reduce:transition-none bg-gray-900 text-white">
   <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
     <a routerLink="/"
-      class="flex items-center gap-2 text-2xl font-bold text-white hover:text-blue-400 transition hover:cursor-pointer">
+      class="flex items-center gap-2 text-2xl font-bold text-white">
       <span class="font-semibold">{{ 'portfolio-title' | translate }}</span>
       <!-- (click)="scrollTop()" -->
     </a>
     <ul class="flex items-center gap-4 font-bold">
       <li>
-        <span class="hover:opacity-90 hover:text-blue-400 transition hover:cursor-pointer" (click)="scrollToItem('portfolio')">Profil</span>
+        <span class="hover:opacity-90 hover:text-blue-400 transition hover:cursor-pointer" (click)="scrollToItem('portfolio')">{{ 'navbar.profil' | translate }}</span>
       </li>
       <li>
-        <span class="hover:opacity-90 hover:text-blue-400 transition hover:cursor-pointer" (click)="scrollToItem('parcours')">Parcours</span>
+        <span class="hover:opacity-90 hover:text-blue-400 transition hover:cursor-pointer" (click)="scrollToItem('parcours')">{{ 'navbar.parcours' | translate }}</span>
       </li>
       <li>
-        <span class="hover:opacity-90 hover:text-blue-400 transition hover:cursor-pointer" (click)="scrollToItem('skills')">Compétences</span>
+        <span class="hover:opacity-90 hover:text-blue-400 transition hover:cursor-pointer" (click)="scrollToItem('skills')">{{ 'navbar.skills' | translate }}</span>
       </li>
       <li>
-        <span class="hover:opacity-90 hover:text-blue-400 transition hover:cursor-pointer" (click)="scrollToItem('experiences')">Expériences</span>
+        <span class="hover:opacity-90 hover:text-blue-400 transition hover:cursor-pointer" (click)="scrollToItem('experiences')">{{ 'navbar.exp' | translate }}</span>
       </li>
     </ul>
 
