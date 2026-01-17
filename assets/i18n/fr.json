@@ -1,0 +1,113 @@
+{
+  "portfolio-title": "Mon Portfolio",
+  "not-found": {
+    "error_404": "Erreur 404",
+    "page_title": "Page introuvable",
+    "oops": "Oups… la page que vous cherchez n’existe pas (ou plus).",
+    "back_to_home": "Retour à l’accueil",
+    "contact": "Contacter",
+    "code_404": "Code: 404 • Si le problème persiste,",
+    "let_me_know": "dites-le moi"
+  },
+  "home": {
+    "welcome": "Bienvenue sur mon portfolio",
+    "discover": "Découvrir",
+    "intro": "Découvrez mon parcours, mes compétences et mes expériences au fil d’une exploration fluide et visuelle.",
+    "journey": "🧭 Mon parcours",
+    "today": "Aujourd'hui",
+    "lookingForJob": "🚀 En recherche d’un CDI dans le développement",
+    "lookingForJob_desc": "Motivée pour rejoindre une entreprise tech en tant que développeuse full-stack, où je pourrai valoriser mes compétences en front, back et design UX.",
+    "master": "🎓 Master Développement Full-Stack – Efrei Paris (en alternance)",
+    "master_desc": "Participation à des projets avancés en front-end Angular, tutoriels interactifs, gestion d'utilisateurs et maintenance back-end Java.",
+    "licence": "🧪 Licence Pro – Conception, Développement, Test de Logiciels (en alternance)",
+    "licence_desc": "Mise en œuvre de nouvelles interfaces, amélioration UX et création de pages spécifiques pour des cas métiers réels.",
+    "dut": "💻 DUT Informatique – IUT de Montreuil (stage de 16 semaines)",
+    "dut_desc": "Formation solide en développement logiciel, bases de données et algorithmique. Le stage m’a permis d'intégrer une équipe produit et de découvrir les outils professionnels.",
+    "bac": "🎓 Baccalauréat",
+    "bac_desc": "Obtention du bac, avec l’objectif clair de poursuivre des études en informatique et développer ma passion pour la tech."
+  },
+  "about": {
+    "title": "À propos",
+    "description": "Diplômée d’un Mastère Dev Manager Full Stack à l’Efrei, je suis passionnée par le développement web. J'aime concevoir des applications performantes, intuitives et bien structurées. Mon objectif : contribuer à des projets innovants où technique et UX avancent ensemble.",
+    "experiences" : "J’ai effectué 3 années d’alternance chez Storyzy, une entreprise spécialisée dans la lutte contre la désinformation, où j’ai participé à des projets variés : conception de tutoriels interactifs, développement front-end en Angular et maintenance back-end en Java.",
+    "search-for": "Je recherche aujourd’hui un CDI en tant que développeuse full-stack, avec la volonté de contribuer à des projets utiles, aussi bien dans le secteur privé que dans des environnements institutionnels tels que les commissariats."
+  },
+  "language": {
+    "fr": "Français",
+    "en": "Anglais"
+  },
+  "skills": {
+    "title": "Compétences",
+    "languages": "Langages",
+    "languages_list": "Java, JavaScript, TypeScript, Python, PHP, SQL, HTML, CSS",
+    "framework": "Frameworks & Bibliothèques",
+    "framework_list": "Angular, Spring Boot, Node.js, Express, Bootstrap, TailwindCSS",
+    "databases": "Bases de données",
+    "databases_list": "MySQL, PostgreSQL, MongoDB, SQLite",
+    "tools": "Outils & Méthodologies",
+    "tools_list": "Git, GitHub/GitLab, GitHub Actions, Jira, OpenProject, Méthodes Agile & Lean Startup, CI/CD",
+    "test": "Tests & Qualité",
+    "test_list": "JUnit (Java), Jest (JS/TS), ESLint, Prettier, Swagger, Postman",
+    "deployment": "Déploiement & Cloud",
+    "deployment_list": "Docker, Docker Compose, Firebase, Heroku, AWS (bases)",
+    "design": "Design & Création",
+    "design_list": "Figma, Photoshop, Premiere Pro"
+  },
+  "experiences" : {
+    "title" : "Expériences professionnelles",
+    "caisse" : "Hôtesse de caisse",
+    "cdi-tp" : "CDI temps partiel",
+    "dev-full-stack" : "Développeuse Full-Stack — Lutte contre la désinformation",
+    "alt" : "Alternance",
+    "cdd" : "CDD",
+    "stage" : "Stage",
+    "leclerc": {
+      "lieu": "E.Leclerc (93 – Pantin) • 8 avr. 2023 – 25 janv. 2025 • ",
+      "time": "1 an et 10 mois",
+      "desc" : "Tous les samedis • Accueil client, encaissement, gestion des paiements et assistance.",
+      "tags" : "Gestion de la caisse"
+    },
+    "sto-1": {
+      "lieu" : "Storyzy (75 - Paris) • 25 sept. 2023 – 3 sept. 2025 • ",
+      "time" : "2 ans et 1 mois",
+      "desc" : "Implémentation de fonctionnalités front & back (architecture MVC), mise à jour de la plateforme DAT, amélioration continue et rédaction de documents techniques.",
+      "li-1" : "Développement Angular (UX, onboarding, guided tours) & Spring Boot (API, services).",
+      "li-2" : "Qualité : tests, documentation, bonnes pratiques, performance.",
+      "li-3" : "Collaboration produit/design, suivi des versions et déploiements."
+    },
+    "sto-2": {
+      "lieu" : "Storyzy (75) • 26 sept. 2022 – 22 sept. 2023 • ",
+      "time" : "1 an et 1 mois",
+      "li-1" : "Développement front et back (architecture MVC)",
+      "li-2" : "Intégrations UI (User Interface)",
+      "li-3" : "Maintenance du code, corrections de bugs et ajout de petites fonctionnalités"
+    },
+    "sto-3": {
+      "lieu" : "Storyzy (75) • 25 juillet – 24 septembre 2022 • ",
+      "time" : "3 mois",
+      "desc" : "Correctifs, petites features, intégrations UI et optimisation."
+    },
+    "sto-4": {
+      "lieu" : "Storyzy (75 - Paris) • 04 avril – 22 juillet 2022 • ",
+      "time" : "16 semaines",
+      "desc" : "Développement initial et montée en compétences sur Java / Angular, participation aux premières fonctionnalités de la plateforme."
+    }
+  },
+  "navbar" : {
+    "profil" : "Profil",
+    "parcours" : "Parcours",
+    "skills" : "Compétences",
+    "exp" : "Expériences"
+  },
+  "profil" : {
+    "dev" : "Développeuse Full-Stack",
+    "poste" : "Poste visé : Full-Stack",
+    "dispo" : "Dispo : Immédiate",
+    "mat" : {
+      "linkedin": "Voir mon profil linkedin",
+      "github" : "Voir mon profil github",
+      "cv" : "Télécharger mon CV",
+      "mail" : "Mail"
+    }
+  }
+}
