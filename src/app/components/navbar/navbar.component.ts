@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, HostListener, signal } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, signal } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { DEFAULT_LANG, LANGUAGES } from '../../constants';
 
 import { inject } from '@angular/core';
@@ -8,7 +8,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [NgClass, NgFor, TranslateModule, RouterLink, 
+  imports: [NgClass, NgFor, TranslateModule, RouterLink, NgIf, 
     // RouterLinkActive
   ],
   templateUrl: './navbar.component.html',
@@ -26,6 +26,8 @@ export class NavbarComponent {
   private ticking = false;
   private downThreshold = 16; // évite le jitter
   private upThreshold = 8; // hysteresis légère
+
+  isMenuOpen = false;
 
   @HostListener('window:scroll')
   onScroll() {
@@ -65,10 +67,30 @@ export class NavbarComponent {
     }
   }
 
-  constructor() {
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: MouseEvent): void {
+    const target = event.target as Node;
+    if (this.isMenuOpen && !this.elementRef.nativeElement.contains(target))
+      this.closeMenu();
+  }
+
+  constructor(private elementRef: ElementRef) {
     this.translate.onLangChange.subscribe((event) => {
       this.currentLang = event.lang;
     });
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
+  navigateTo(section: string): void {
+    this.scrollToItem(section);
+    this.closeMenu();
   }
 
   setLanguage(lang: string) {
