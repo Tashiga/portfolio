@@ -1,0 +1,9 @@
+[
+  { "title": "skills.languages", "description": "skills.languages_list" },
+  { "title": "skills.framework", "description": "skills.framework_list" },
+  { "title": "skills.databases", "description": "skills.databases_list" },
+  { "title": "skills.tools", "description": "skills.tools_list" },
+  { "title": "skills.test", "description": "skills.test_list" },
+  { "title": "skills.deployment", "description": "skills.deployment_list" },
+  { "title": "skills.design", "description": "skills.design_list" }
+]
