@@ -1,22 +1,11 @@
-<section
-  id="parcours"
-  class="mt-32 px-6 py-20 max-w-5xl mx-auto text-white bg-gray-800 rounded-2xl shadow-lg"
->
-  <h2 class="text-3xl font-bold mb-10 text-blue-400 text-center">
-    {{ 'home.journey' | translate }}
-  </h2>
-
-  <ul class="space-y-8 border-l-2 border-blue-500 pl-6">
+<section id="parcours" class="scroll-mt-24 mt-16 sm:mt-20 lg:mt-28 px-5 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-14 w-full max-w-5xl mx-auto text-white bg-gray-800 rounded-2xl sm:rounded-3xl shadow-lg">
+  <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-10 text-blue-400 text-center">{{ 'home.journey' | translate }}</h2>
+  <ul class="space-y-7 sm:space-y-8 border-l-2 border-blue-500 ml-2 sm:ml-3 pl-5 sm:pl-6">
     <li *ngFor="let etape of parcours" class="etape relative">
-      <div
-        class="absolute -left-[1.1rem] top-1 w-4 h-4 bg-blue-400 rounded-full border-2 border-white"
-      ></div>
-
-      <span class="text-sm text-blue-300 font-medium">
-        {{ etape.annee === 'Aujourd’hui' ? ('home.today' | translate) : etape.annee }}
-      </span>
-      <h3 class="text-xl font-semibold mt-1">{{ 'home.' + etape.titre | translate }}</h3>
-      <p class="text-gray-300 mt-1">{{ 'home.' + etape.titre + '_desc' | translate }}</p>
+      <div class="absolute -left-[1.68rem] sm:-left-[2.05rem] top-1 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-blue-400 rounded-full border-2 border-white"></div>
+      <span class="text-xs sm:text-sm text-blue-300 font-medium">{{ etape.annee === 'Aujourd’hui' ? ('home.today' | translate) : etape.annee }}</span>
+      <h3 class="text-lg sm:text-xl font-semibold mt-1 leading-snug">{{ 'home.' + etape.titre | translate }}</h3>
+      <p class="text-sm sm:text-base text-gray-300 mt-2 leading-relaxed">{{ 'home.' + etape.titre + '_desc' | translate }}</p>
     </li>
   </ul>
 </section>

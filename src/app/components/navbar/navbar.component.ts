@@ -107,6 +107,14 @@ export class NavbarComponent {
 
   scrollToItem(item: string): void {
     if(item) {
+       if (item === 'portfolio') {
+        const isMobile = window.innerWidth < 768;
+        const targetId = isMobile ? 'mobile-profile' : 'about';
+        const element = document.getElementById(targetId);
+        if (element) 
+          element.scrollIntoView({behavior: 'smooth', block: 'start'});
+        return;
+      }
       document.getElementById(item)?.scrollIntoView({behavior: 'smooth'});
     }
   }

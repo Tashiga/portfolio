@@ -76,14 +76,14 @@
       "li-3" : "Product and design collaboration, version tracking and deployments."
     },
     "sto-2": {
-      "lieu" : "Storyzy (75) • Sep 26, 2022 – Sep 22, 2023 • ",
+      "lieu" : "Storyzy (75 - Paris) • Sep 26, 2022 – Sep 22, 2023 • ",
       "time" : "1 year and 1 month",
       "li-1" : "Frontend and backend development (MVC architecture)",
       "li-2" : "UI integrations (User Interface)",
       "li-3" : "Code maintenance, bug fixes and implementation of small features"
     },
     "sto-3": {
-      "lieu" : "Storyzy (75) • Jul 25 – Sep 24, 2022 •",
+      "lieu" : "Storyzy (75 - Paris) • Jul 25 – Sep 24, 2022 •",
       "time" : "3 months",
       "desc" : "Bug fixes, small features, UI integrations and optimizations."
     },
@@ -95,6 +95,7 @@
   },
   "navbar" : {
     "profil" : "Profile",
+    "about": "About",
     "parcours" : "Background",
     "skills" : "Skills",
     "exp" : "Experience"

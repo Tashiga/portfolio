@@ -1,148 +1,113 @@
-<section
-  id="experiences"
-  class="mt-32 max-w-5xl mx-auto bg-gray-800 text-white rounded-2xl px-6 py-20 sm:p-8 shadow-lg"
-  >
-  <h2 class="text-3xl font-bold text-center mb-10">{{ 'experiences.title' | translate}}</h2>
-
-  <div class="container mx-auto flex justify-center">
-    <div class="max-w-4xl w-full space-y-8">
-
-      <!-- E. Leclerc -->
-      <div class="bg-white text-gray-900 shadow-lg rounded-xl p-6 flex gap-6 items-start">
-        <img src="assets/img/leclerc_logo.webp" alt="E. Leclerc" class="w-20 h-12 rounded-md object-contain" />
-        <div>
-          <h3 class="text-xl font-semibold">
-            {{ 'experiences.caisse' | translate}}
-            <span class="ml-2 inline-block align-middle text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-md">{{ 'experiences.cdi-tp' | translate}}</span>
-          </h3>
-
-          <!-- Entreprise + période -->
-          <p class="text-gray-600">{{ 'experiences.leclerc.lieu' | translate}}<span class="font-medium">{{ 'experiences.leclerc.time' | translate}}</span></p>
-
-          <!-- Description -->
-          <p class="mt-2 text-gray-700">
-            {{ 'experiences.leclerc.desc' | translate}}
-          </p>
-
+<section id="experiences" class="scroll-mt-24 mt-16 sm:mt-20 lg:mt-28 px-5 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-14 w-full max-w-5xl mx-auto text-white bg-gray-800 rounded-2xl sm:rounded-3xl shadow-lg">
+  <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10 text-blue-400">
+    {{ 'experiences.title' | translate }}
+  </h2>
+  <div class="w-full space-y-5 sm:space-y-6 lg:space-y-8">
+      <div class="border-b border-gray-700 pb-6 sm:pb-8 flex flex-col sm:flex-row gap-2 sm:gap-5 lg:gap-6 items-start last:border-b-0 last:pb-0">
+        <div class="w-24 h-16 flex items-center justify-center flex-shrink-0 bg-white/95 rounded-xl p-2 shadow-sm ring-1 ring-white/10">
+          <img src="assets/img/leclerc_logo.webp" alt="E. Leclerc" class="w-full h-full object-contain" />
+        </div>
+        <div class="min-w-0 flex-1">
+          <div class="flex flex-wrap items-center gap-2">
+            <h3 class="text-lg sm:text-xl font-semibold leading-snug text-blue-300">{{ 'experiences.caisse' | translate}}</h3>
+            <span class="inline-block text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-md">{{ 'experiences.cdi-tp' | translate}}</span>
+          </div>
+          <p class="mt-1 text-sm sm:text-base text-gray-400">{{ 'experiences.leclerc.lieu' | translate}}<span class="font-medium">{{ 'experiences.leclerc.time' | translate}}</span></p>
+          <p class="mt-2 text-sm sm:text-base text-gray-300 leading-relaxed">{{ 'experiences.leclerc.desc' | translate}}</p>
           <!-- Compétences -->
           <!-- <p class="mt-3 text-gray-700"><span class="font-semibold">Compétences :</span> Gestion de la caisse</p> -->
-
-          <!-- Tags -->
-          <div class="mt-2 flex flex-wrap gap-2">
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">{{ 'experiences.leclerc.tags' | translate}}</span>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">{{ 'experiences.leclerc.tags' | translate}}</span>
           </div>
-
         </div>
       </div>
-
-      <!-- Storyzy — Alternance (2023–2025) -->
-      <div class="bg-white text-gray-900 shadow-lg rounded-xl p-6 flex gap-6 items-start">
-        <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-20 h-12 rounded-md object-contain" />
-        <div>
-          <h3 class="text-xl font-semibold">
-            {{ 'experiences.dev-full-stack' | translate}}
-            <span class="ml-2 inline-block align-middle text-xs font-medium bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-md">{{ 'experiences.alt' | translate}}</span>
-          </h3>
-
-          <!-- Entreprise + période + durée -->
-          <p class="text-gray-600">{{ 'experiences.sto-1.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-1.time' | translate}}</span></p>
-
-          <!-- Description -->
-          <p class="mt-2 text-gray-700">
-            {{ 'experiences.sto-1.desc' | translate}}
-          </p>
-
-          <!-- Réalisations (tu peux garder) -->
-          <ul class="mt-3 list-disc list-inside text-gray-700">
+ 
+      <div class="border-b border-gray-700 pb-6 sm:pb-8 flex flex-col sm:flex-row gap-2 sm:gap-5 lg:gap-6 items-start last:border-b-0 last:pb-0">
+        <div class="w-24 h-16 flex items-center justify-center flex-shrink-0 bg-white/95 rounded-xl p-2 shadow-sm ring-1 ring-white/10">
+          <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-full h-full object-contain"/>
+        </div>
+        <div class="min-w-0 flex-1">
+          <div class="flex flex-wrap items-center gap-2">
+            <h3 class="text-lg sm:text-xl font-semibold leading-snug text-blue-300">{{ 'experiences.dev-full-stack' | translate }}</h3>
+            <span class="inline-block text-xs font-medium bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-md">{{ 'experiences.alt' | translate }}</span>
+          </div>
+          <p class="mt-1 text-sm sm:text-base text-gray-400">{{ 'experiences.sto-1.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-1.time' | translate}}</span></p>
+          <p class="mt-2 text-sm sm:text-base text-gray-300 leading-relaxed">{{ 'experiences.sto-1.desc' | translate}}</p>
+          <ul class="mt-3 list-disc pl-5 space-y-1 text-sm sm:text-base text-gray-300 leading-relaxed">
             <li>{{ 'experiences.sto-1.li-1' | translate}}</li>
             <li>{{ 'experiences.sto-1.li-2' | translate}}</li>
             <li>{{ 'experiences.sto-1.li-3' | translate}}</li>
           </ul>
-
-          <!-- Tags -->
-          <div class="mt-2 flex flex-wrap gap-2">
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Java</span>
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Angular</span>
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Spring Boot</span>
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">MVC</span>
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">UX</span>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Java</span>
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Angular</span>
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Spring Boot</span>
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">MVC</span>
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">UX</span>
           </div>
         </div>
       </div>
 
-      <!-- Storyzy — Alternance (2022–2023) -->
-      <div class="bg-white text-gray-900 shadow-lg rounded-xl p-6 flex gap-6 items-start">
-        <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-20 h-12 rounded-md object-contain" />
-        <div>
-          <h3 class="text-xl font-semibold">
-            {{ 'experiences.dev-full-stack' | translate}}
-            <span class="ml-2 inline-block align-middle text-xs font-medium bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-md">{{ 'experiences.alt' | translate}}</span>
-          </h3>
-
-          <!-- Entreprise + période + durée -->
-          <p class="text-gray-600">{{ 'experiences.sto-2.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-2.time' | translate}}</span></p>
-
-          <ul class="mt-3 list-disc list-inside text-gray-700">
+      <div class="border-b border-gray-700 pb-6 sm:pb-8 flex flex-col sm:flex-row gap-2 sm:gap-5 lg:gap-6 items-start last:border-b-0 last:pb-0">
+        <div class="w-24 h-16 flex items-center justify-center flex-shrink-0 bg-white/95 rounded-xl p-2 shadow-sm ring-1 ring-white/10">
+          <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-full h-full object-contain"/>
+        </div>
+        <div class="min-w-0 flex-1">
+          <div class="flex flex-wrap items-center gap-2">
+            <h3 class="text-lg sm:text-xl font-semibold leading-snug text-blue-300">{{ 'experiences.dev-full-stack' | translate}}</h3>
+            <span class="inline-block text-xs font-medium bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-md">{{ 'experiences.alt' | translate}}</span>
+          </div>
+          <p class="mt-1 text-sm sm:text-base text-gray-400">{{ 'experiences.sto-2.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-2.time' | translate}}</span></p>
+          <ul class="mt-3 list-disc pl-5 space-y-1 text-sm sm:text-base text-gray-300 leading-relaxed">
             <li>{{ 'experiences.sto-2.li-1' | translate}}</li>
             <li>{{ 'experiences.sto-2.li-2' | translate}}</li>
             <li>{{ 'experiences.sto-2.li-3' | translate}}</li>
           </ul>
-
-          <!-- Tags -->
-          <div class="mt-2 flex flex-wrap gap-2">
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Java</span>
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Angular</span>
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Spring Boot</span>
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">MVC</span>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Java</span>
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Angular</span>
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Spring Boot</span>
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">MVC</span>
           </div>
         </div>
       </div>
 
-      <!-- Storyzy — CDD (2022) -->
-      <div class="bg-white text-gray-900 shadow-lg rounded-xl p-6 flex gap-6 items-start">
-        <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-20 h-12 rounded-md object-contain"/>
-        <div>
-          <h3 class="text-xl font-semibold">
-            {{ 'experiences.dev-full-stack' | translate}}
-            <span class="ml-2 inline-block align-middle text-xs font-medium bg-amber-100 text-amber-700 px-2 py-0.5 rounded-md">{{ 'experiences.cdd' | translate}}</span>
-          </h3>
-
-          <!-- Entreprise + période + durée -->
-          <p class="text-gray-600">{{ 'experiences.sto-3.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-3.time' | translate}}</span></p>
-
-          <!-- Description courte -->
-          <p class="mt-2 text-gray-700">
-            {{ 'experiences.sto-3.desc' | translate}}
-          </p>
-
-          <!-- Tags -->
-          <div class="mt-2 flex flex-wrap gap-2">
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Java</span>
-              <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Angular</span>
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Spring Boot</span>
+      <div class="border-b border-gray-700 pb-6 sm:pb-8 flex flex-col sm:flex-row gap-2 sm:gap-5 lg:gap-6 items-start last:border-b-0 last:pb-0">
+        <div class="w-24 h-16 flex items-center justify-center flex-shrink-0 bg-white/95 rounded-xl p-2 shadow-sm ring-1 ring-white/10" >
+          <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-full h-full object-contain"/>
+        </div>
+        <div class="min-w-0 flex-1">
+          <div class="flex flex-wrap items-center gap-2">
+            <h3 class="text-lg sm:text-xl font-semibold leading-snug text-blue-300">{{ 'experiences.dev-full-stack' | translate}}</h3>
+            <span class="inline-block text-xs font-medium bg-amber-100 text-amber-700 px-2 py-0.5 rounded-md">{{ 'experiences.cdd' | translate}}</span>
+          </div>
+          <p class="mt-1 text-sm sm:text-base text-gray-400">{{ 'experiences.sto-3.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-3.time' | translate}}</span></p>
+          <p class="mt-2 text-sm sm:text-base text-gray-300 leading-relaxed">{{ 'experiences.sto-3.desc' | translate}}</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Java</span>
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Angular</span>
+            <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Spring Boot</span>
           </div>
         </div>
       </div>
 
-      <!-- Storyzy — Stage (2022) -->
-      <div class="bg-white text-gray-900 shadow-lg rounded-xl p-6 flex gap-6 items-start">
-          <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-20 h-12 rounded-md object-contain"/>
-          <div>
-            <h3 class="text-xl font-semibold">{{ 'experiences.dev-full-stack' | translate}}
-              <span class="ml-2 inline-block align-middle text-xs font-medium bg-sky-100 text-sky-700 px-2 py-0.5 rounded-md">{{ 'experiences.stage' | translate}}</span>
-            </h3>
-            <p class="text-gray-600">{{ 'experiences.sto-4.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-4.time' | translate}}</span></p>
-            <p class="mt-2 text-gray-700">
-              {{ 'experiences.sto-4.desc' | translate}}
-            </p>
+      <div class="border-b border-gray-700 pb-6 sm:pb-8 flex flex-col sm:flex-row gap-2 sm:gap-5 lg:gap-6 items-start last:border-b-0 last:pb-0">
+          <div class="w-24 h-16 flex items-center justify-center flex-shrink-0 bg-white/95 rounded-xl p-2 shadow-sm ring-1 ring-white/10" >
+            <img src="assets/img/storyzy_logo.png" alt="Storyzy" class="w-full h-full object-contain" />
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="flex flex-wrap items-center gap-2">
+              <h3 class="text-lg sm:text-xl font-semibold leading-snug text-blue-300">{{ 'experiences.dev-full-stack' | translate}}</h3>
+              <span class="inline-block text-xs font-medium bg-sky-100 text-sky-700 px-2 py-0.5 rounded-md">{{ 'experiences.stage' | translate}}</span>
+            </div>
+            <p class="mt-1 text-sm sm:text-base text-gray-400">{{ 'experiences.sto-4.lieu' | translate}}<span class="font-medium">{{ 'experiences.sto-4.time' | translate}}</span></p>
+            <p class="mt-2 text-sm sm:text-base text-gray-300 leading-relaxed">{{ 'experiences.sto-4.desc' | translate}}</p>
             <div class="mt-3 flex flex-wrap gap-2">
-              <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Java</span>
-              <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Angular</span>
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-md">Spring Boot</span>
+              <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Java</span>
+              <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Angular</span>
+              <span class="text-xs bg-gray-700/70 text-gray-200 px-2.5 py-1 rounded-md">Spring Boot</span>
             </div>
           </div>
         </div>
-
-    </div>
   </div>
 </section>

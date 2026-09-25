@@ -1,32 +1,23 @@
-<div id='profil' class="text-white rounded-2xl p-6 shadow-lg text-center">
-    <div class="flex items-center justify-center gap-4">
-        <!-- <img src="assets/img/profil.png" alt="Photo de profil" class="w-20 h-20 rounded-full object-cover border-4 border-gray-700" /> -->
-        <img
-            src="assets/img/profil_2.png"
-            alt="Photo de profil"
-            class="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-gray-700"/>
+<div id="profil" class="scroll-mt-24 text-white rounded-2xl p-5 sm:p-6 shadow-lg text-center">
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-4" >
+        <img src="assets/img/profil_2.png" alt="Photo de Sashtiga Sasirajah" class="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-full object-cover shadow-lg border-4 border-gray-700" />
         <div>
-            <p class="text-2xl text-blue-300 font-bold leading-tight">{{ 'profil.dev' | translate }}</p>
-            <h2 class="text-2xl font-bold leading-tight">Sashtiga Sasirajah</h2>
+            <p class="text-lg sm:text-xl lg:text-2xl text-blue-300 font-bold leading-tight" >
+                {{ 'profil.dev' | translate }}
+            </p>
+            <h2 class="mt-1 text-xl sm:text-2xl font-bold leading-tight" >Sashtiga Sasirajah</h2>
         </div>
     </div>
-
-    <ul class="mt-4 space-y-1 text-gray-200 text-sm text-center">
+    <ul class="mt-5 space-y-2 text-gray-200 text-sm text-center">
         <li>📍 Île-de-France, France</li>
         <li>📞 07 81 69 85 02</li>
-        <li>📧 sasisashtiga2002{{'@'}}gmail.com</li>
+        <li class="break-all">📧 sasisashtiga2002{{'@'}}gmail.com</li>
         <li>💼 {{ 'profil.poste' | translate }}</li>
         <li>🕐 {{ 'profil.dispo' | translate }}</li>
     </ul>
-
     <div>
-        <div class="mt-5 flex flex-wrap justify-center gap-3">
-            <a
-                class="inline-flex items-center gap-1 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-transform transform hover:scale-105"
-                href="https://www.linkedin.com/in/sashtiga-sasirajah-8187a5199/"
-                target="_blank"
-                rel="noopener"
-                matTooltip="{{ 'profil.mat.linkedin' | translate }}">
+        <div class="mt-6 grid grid-cols-2 gap-3">
+            <a class="flex items-center justify-center gap-2 min-h-12 px-3 py-3 rounded-xl text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5" href="https://www.linkedin.com/in/sashtiga-sasirajah-8187a5199/" target="_blank" rel="noopener" matTooltip="{{ 'profil.mat.linkedin' | translate }}">
                 <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path
                     d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 
@@ -39,14 +30,7 @@
                 />
                 </svg>
             </a>
-
-            <a
-                class="inline-flex items-center gap-1 px-6 py-3 rounded-xl bg-gray-800 hover:bg-gray-900 text-white shadow-lg transition-transform transform hover:scale-105"
-                href="https://github.com/Tashiga"
-                target="_blank"
-                rel="noopener"
-                matTooltip="{{ 'profil.mat.github' | translate }}"
-            >
+            <a class="flex items-center justify-center gap-2 min-h-12 px-3 py-3 rounded-xl text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5" href="https://github.com/Tashiga" target="_blank" rel="noopener" matTooltip="{{ 'profil.mat.github' | translate }}">
                 <svg
                 class="w-6 h-6 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,16 +65,7 @@
                 </svg>
                 <span>GitHub</span>
             </a>
-
-            <a
-                class="inline-flex items-center gap-1 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-md transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800"
-                href="assets/cv/Sashtiga_SASIRAJAH_CV_CDI_1.pdf"
-                download="Sashtiga_Sasirajah_CV_downloaded.pdf"
-                target="_blank"
-                rel="noopener"
-                aria-label="Télécharger le CV (PDF)"
-                matTooltip="{{ 'profil.mat.cv' | translate }}"
-            >
+            <a class="flex items-center justify-center gap-2 min-h-12 px-3 py-3 rounded-xl text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5" href="assets/cv/Sashtiga_SASIRAJAH_CV_CDI_1.pdf" download="Sashtiga_Sasirajah_CV_downloaded.pdf" target="_blank" rel="noopener" aria-label="Télécharger le CV (PDF)" matTooltip="{{ 'profil.mat.cv' | translate }}" >
                 <svg
                 class="w-5 h-5 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,10 +79,7 @@
                 </svg>
                 <span class="font-semibold">CV</span>
             </a>
-
-            <a href="mailto:sasisashtiga2002@gmail.com" 
-            class="inline-flex items-center gap-1 px-6 py-3 rounded-xl bg-gray-800 hover:bg-gray-900 text-white shadow-lg transition-transform transform hover:scale-105"
-            matTooltip="{{ 'profil.mat.mail' | translate }}">
+            <a href="mailto:sasisashtiga2002@gmail.com" class="flex items-center justify-center gap-2 min-h-12 px-3 py-3 rounded-xl text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5" matTooltip="{{ 'profil.mat.mail' | translate }}">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                 <path d="M2.01 6.06A2 2 0 0 1 4 5h16a2 2 0 0 1 1.99 1.94L22 18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6.06zm2 .94v.01L12 13l7.99-6.01H4z"/>
                 </svg>

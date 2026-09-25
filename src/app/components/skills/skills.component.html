@@ -1,13 +1,9 @@
-<section
-  id="skills"
-  class="mt-32 px-6 py-20 max-w-5xl mx-auto text-white bg-gray-800 rounded-2xl shadow-lg"
->
-  <h2 class="text-3xl font-bold mb-8 text-blue-400">{{ 'skills.title' | translate }}</h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div *ngFor="let skill of skills">
-      <h3 class="text-xl font-semibold text-blue-300 mb-3">{{ skill.title | translate }}</h3>
-      <p class="text-gray-300">{{ skill.description | translate }}</p>
+<section id="skills"  class="scroll-mt-24 mt-16 sm:mt-20 lg:mt-28 px-5 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-14 w-full max-w-5xl mx-auto text-white bg-gray-800 rounded-2xl sm:rounded-3xl shadow-lg" >
+  <h2 class="text-2xl sm:text-3xl font-bold mb-7 sm:mb-8 text-blue-400 text-center">{{ 'skills.title' | translate }}</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-10 md:gap-y-8">
+    <div *ngFor="let skill of skills" class="min-w-0">
+      <h3 class="text-lg sm:text-xl font-semibold text-blue-300 mb-2 sm:mb-3 leading-snug">{{ skill.title | translate }}</h3>
+      <p class="text-sm sm:text-base text-gray-300 leading-relaxed">{{ skill.description | translate }}</p>
     </div>
   </div>
 </section>
